@@ -21,3 +21,4 @@ p_value = 2 * pnorm(-abs(z_score))
 cat("Sample Mean:", x_bar, "\n")
 cat("Z-Score:", z_score, "\n")
 cat("P-Value:", p_value, "\n")
+
