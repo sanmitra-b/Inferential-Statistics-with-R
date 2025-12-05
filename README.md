@@ -137,7 +137,7 @@ This repository contains a comprehensive collection of R programming lab reports
 </details>
 
 <details>
-<summary><strong>Lab 8: Proportions Tests</strong></summary>
+<summary><strong>Lab 8: Single and Two Proportions Tests</strong></summary>
 
 * **One-Sample:** Test if Automatic cars = 50% ($p=0.5$).
     * *Result:* P-value = 0.3768. Fail to reject $H_0$.
@@ -150,5 +150,39 @@ This repository contains a comprehensive collection of R programming lab reports
       
 ![Lab 8 Output](assets/lab8b-output.png)
 
+
+</details>
+
+<details>
+<summary><strong>Lab 9: One-Way ANOVA (Chick Weights)</strong></summary>
+
+### 1. Data Description
+* **Dataset:** Custom vectors representing chick weights fed on different diets.
+* **Groups (Feeds):** Horsebean, Linseed, Soyabeen, Sunflower, Meatmeal, Casein.
+* **Objective:** Compare the effect of 6 different feed types on chick weight.
+
+### 2. Methodology
+* **Test:** One-Way Analysis of Variance (ANOVA).
+* **Hypothesis:** * $H_0$: All feed types result in the same mean weight ($\mu_1 = \mu_2 = ... = \mu_6$).
+    * $H_1$: At least one feed type results in a different mean weight.
+* **Visualization:** Boxplot generated to visually compare medians.
+
+### 3. Results
+* **F-statistic:** 15.37
+* **Degrees of Freedom:** 5 (between groups), 65 (residuals)
+* **P-value:** $5.94 \times 10^{-10}$ (indicated as `***`)
+
+![Lab 9 ANOVA Output](assets/lab9-output.png)
+
+
+![Lab 9 Boxplot](assets/lab9-boxplot.png)
+
+
+### 4. Decision
+Since $p = 5.94 \times 10^{-10} < 0.05$, we **reject the Null Hypothesis ($H_0$)**.
+
+### 5. Interpretation
+* There is a statistically significant difference in chick weights depending on the feed type provided.
+* **Boxplot Analysis:** The visual data suggests that **Casein** results in the highest median weight, while **Horsebean** results in the lowest. The other feeds cluster in the middle.
 
 </details>
