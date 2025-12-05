@@ -24,7 +24,6 @@ This repository contains a comprehensive collection of R programming lab reports
 
 ### 3. Results (Output)
 ![Lab 1 R Console Output](assets/lab1-output.png)
-*(Note: Upload your Lab 1 screenshot to the assets folder)*
 
 > **Interpretation:**
 > * The Sampling Error remained constant (0.724) as both samples had $n=7$.
@@ -144,10 +143,14 @@ This repository contains a comprehensive collection of R programming lab reports
 
 * **One-Sample:** Test if Automatic cars = 50% ($p=0.5$).
     * *Result:* P-value = 0.3768. Fail to reject $H_0$.
+      
+![Lab 8 Output](assets/lab8a-output.png)
+
 * **Two-Sample:** Compare Automatic proportion in 4-cyl vs. 6/8-cyl cars.
     * *Result:* P-value = 0.02161. **Reject $H_0$.**
     * *Interpretation:* 6/8-cylinder cars are significantly more likely to have automatic transmission.
+      
+![Lab 8 Output](assets/lab8b-output.png)
 
-![Lab 8 Output](assets/lab8-output.png)
 
 </details>
