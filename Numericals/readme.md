@@ -1,25 +1,14 @@
-# Statistical Hypothesis Testing with R  
-### Numericals – Data Science & Analytics
+# Hypothesis Testing – Solved Problems with R
 
-## 📌 Overview
-This project demonstrates my ability to **formulate hypotheses, select appropriate statistical tests, implement them in R, and interpret results in real-world contexts**.  
+This repository contains a collection of **statistical hypothesis testing problems** solved using **R**, covering proportions, means, variances, and paired comparisons.  
+Each question includes:
+- Problem statement  
+- Data description  
+- Statistical methodology  
+- R implementation  
+- Results, decision, and interpretation  
 
-The repository contains a curated set of **applied hypothesis testing problems**, covering:
-- Proportions
-- Means (z-tests & t-tests)
-- Variance analysis (chi-square tests)
-- Paired and independent samples
-
-Each problem follows a **structured analytical workflow**, similar to what is expected in academic research, data analytics roles, and business decision-making.
-
----
-
-## 🎯 Skills Demonstrated
-- Statistical inference & hypothesis formulation  
-- Selection of appropriate test statistics  
-- R programming for statistical analysis  
-- Clear interpretation of results for non-technical stakeholders  
-- Structured, reproducible analysis  
+All solutions follow standard statistical testing procedures and are suitable for academic and applied data analysis contexts.
 
 ---
 
@@ -31,187 +20,243 @@ Each problem follows a **structured analytical workflow**, similar to what is ex
 
 ---
 
-## 📊 Project Structure
-Each problem includes:
-1. Business / research question  
-2. Data description  
-3. Statistical methodology  
-4. R implementation  
-5. Decision and interpretation  
+## 📌 Contents
 
-All analyses are **self-contained and reproducible**.
+- Proportion tests (one-sided & two-sided)
+- One-sample, two-sample, and paired t-tests
+- Z-tests with known variance
+- Chi-square tests for variance
+- Real-world datasets and interpretations
 
 ---
 
-## 📂 Solved Problems
+##  Solved Questions
 
 <details>
-<summary><strong>Question 15 – Comparison of Polio Proportions (Rural vs Urban)</strong></summary>
+<summary><strong>Question 15 – Rural vs Urban Polio Proportions (Z-test)</strong></summary>
 
-**Objective:**  
-Assess whether polio incidence is higher in rural areas using a two-proportion Z-test.
+### Problem  
+From samples of rural and urban children, test whether the proportion of polio-affected children is higher in rural areas at the 1% level.
 
-**Key Takeaway:**  
-No statistically significant difference was found at the 1% level.
+### Method  
+Two-proportion Z-test (one-sided)
 
-**Skills Highlighted:**  
-Proportion testing, pooled variance, one-sided inference.
+### Result  
+- Test statistic: *z ≈ 1.30*  
+- p-value: *0.097*
+
+### Decision  
+Fail to reject H₀.
+
+### Conclusion  
+There is insufficient evidence at the 1% level to conclude that rural polio incidence is higher.
 
 </details>
 
 ---
 
 <details>
-<summary><strong>Question 16 – Academic Performance: Coastal vs Non-Coastal Students</strong></summary>
+<summary><strong>Question 16 – Coastal vs Non-Coastal Student Performance (Two-Sample t-test)</strong></summary>
 
-**Objective:**  
-Evaluate whether tsunami-affected students perform worse academically.
+### Problem  
+Test whether students from tsunami-affected coastal areas perform worse than others.
 
-**Key Takeaway:**  
-A statistically significant decline in performance was identified.
+### Method  
+Two-sample t-test (one-sided, equal variances)
 
-**Skills Highlighted:**  
-Two-sample t-test, mean comparison, educational data analysis.
+### Result  
+- *t ≈ −4.25*, p-value < 0.001
 
-</details>
+### Decision  
+Reject H₀.
 
----
-
-<details>
-<summary><strong>Question 17 – Effect of a Drug on Sleep Duration</strong></summary>
-
-**Objective:**  
-Test whether a drug increases average sleep duration.
-
-**Key Takeaway:**  
-Strong evidence supports the effectiveness of the drug.
-
-**Skills Highlighted:**  
-One-sample t-test, biomedical data interpretation.
+### Conclusion  
+Students from coastal areas perform significantly worse at the 1% level.
 
 </details>
 
 ---
 
 <details>
-<summary><strong>Question 18 – Gender-Based Preference for CBCS System</strong></summary>
+<summary><strong>Question 17 – Effect of a Drug on Sleep (One-Sample t-test)</strong></summary>
 
-**Objective:**  
-Check if male and female students differ in their preference for CBCS.
+### Problem  
+Determine whether a drug increases hours of sleep at the 2% significance level.
 
-**Key Takeaway:**  
-No significant gender-based difference was detected.
+### Method  
+One-sample t-test (right-tailed)
 
-**Skills Highlighted:**  
-Two-proportion testing, survey data analysis.
+### Result  
+- Mean increase ≈ 2.7 hours  
+- *t ≈ 17.3*
 
-</details>
+### Decision  
+Reject H₀.
 
----
-
-<details>
-<summary><strong>Question 19 – Variability in Vegetable Mart Sales</strong></summary>
-
-**Objective:**  
-Verify whether the variance in daily sales differs from a claimed value.
-
-**Key Takeaway:**  
-Observed variability aligns with the claimed variance.
-
-**Skills Highlighted:**  
-Chi-square variance testing, operational data analysis.
+### Conclusion  
+The drug significantly increases sleep duration.
 
 </details>
 
 ---
 
 <details>
-<summary><strong>Question 20 – Battery Lifetime Variability Claim</strong></summary>
+<summary><strong>Question 18 – Gender Preference for CBCS System (Two-Proportion Z-test)</strong></summary>
 
-**Objective:**  
-Evaluate a manufacturer’s claim regarding battery life variance.
+### Problem  
+Test whether male and female students differ in support for CBCS at the 2% level.
 
-**Key Takeaway:**  
-The claim is not supported by statistical evidence.
+### Method  
+Two-sided two-proportion Z-test
 
-**Skills Highlighted:**  
-One-sided variance testing, quality control analytics.
+### Result  
+- *z ≈ −1.10*, p-value ≈ 0.27
 
-</details>
+### Decision  
+Fail to reject H₀.
 
----
-
-<details>
-<summary><strong>Question 21 – Average Life of Electric Bulbs</strong></summary>
-
-**Objective:**  
-Determine whether the mean bulb life is lower than the industry claim.
-
-**Key Takeaway:**  
-Evidence shows the average life is significantly lower.
-
-**Skills Highlighted:**  
-Z-test with known population variance, manufacturing analytics.
+### Conclusion  
+No significant difference in preference between genders.
 
 </details>
 
 ---
 
 <details>
-<summary><strong>Question 22 – Weekly Sales Claim Verification</strong></summary>
+<summary><strong>Question 19 – Variance of Vegetable Mart Sales (Chi-Square Test)</strong></summary>
 
-**Objective:**  
-Test whether average weekly sales match a sales forecast.
+### Problem  
+Test whether the variance of daily sales differs from Rs.100 at the 1% level.
 
-**Key Takeaway:**  
-The claim is statistically reasonable.
+### Method  
+Chi-square test for single variance (two-sided)
 
-**Skills Highlighted:**  
-Forecast validation, business analytics.
+### Result  
+- *χ² ≈ 30.4*, df = 19
 
-</details>
+### Decision  
+Fail to reject H₀.
 
----
-
-<details>
-<summary><strong>Question 23 – Birth Weight Variance Analysis</strong></summary>
-
-**Objective:**  
-Assess whether birth weight variability exceeds a medical threshold.
-
-**Key Takeaway:**  
-Variance is significantly lower than expected.
-
-**Skills Highlighted:**  
-Healthcare data analysis, chi-square testing.
+### Conclusion  
+The variance can reasonably be regarded as Rs.100.
 
 </details>
 
 ---
 
 <details>
-<summary><strong>Question 24 – Impact of Coaching on Exam Performance</strong></summary>
+<summary><strong>Question 20 – Battery Lifetime Variance Claim (One-Sided Chi-Square Test)</strong></summary>
 
-**Objective:**  
-Evaluate the effectiveness of coaching using paired observations.
+### Problem  
+Test the manufacturer’s claim that variance exceeds 6800 hours.
 
-**Key Takeaway:**  
-Coaching leads to a statistically significant improvement in scores.
+### Method  
+Right-tailed chi-square test
 
-**Skills Highlighted:**  
-Paired t-test, before-after analysis, program evaluation.
+### Result  
+- *χ² ≈ 14.0* < critical value
+
+### Decision  
+Fail to reject H₀.
+
+### Conclusion  
+The claim of higher variance is not supported.
 
 </details>
 
 ---
 
-## 📈 Why This Matters
-This reflects how to:
-- Translate real-world problems into testable hypotheses  
-- Choose statistically sound methods  
-- Communicate insights clearly for decision-making  
+<details>
+<summary><strong>Question 21 – Mean Life of Bulbs (One-Sample Z-test)</strong></summary>
 
-It mirrors the analytical rigor expected in **Data Analyst, Data Scientist, and Research-oriented roles**.
+### Problem  
+Test whether the average bulb life is less than 1450 hours at the 1% level.
+
+### Method  
+One-sample Z-test (known σ)
+
+### Result  
+- *z ≈ −2.86*, p-value ≈ 0.002
+
+### Decision  
+Reject H₀.
+
+### Conclusion  
+Mean bulb life is significantly less than 1450 hours.
+
+</details>
 
 ---
 
+<details>
+<summary><strong>Question 22 – Weekly Pickle Sales Claim (One-Sample t-test)</strong></summary>
+
+### Problem  
+Verify whether average weekly sales equal 120 at the 1% level.
+
+### Method  
+Two-sided one-sample t-test
+
+### Result  
+- *t ≈ −1.68*, p-value ≈ 0.13
+
+### Decision  
+Fail to reject H₀.
+
+### Conclusion  
+Salesman’s claim is consistent with the data.
+
+</details>
+
+---
+
+<details>
+<summary><strong>Question 23 – Birth Weight Variance Expectation (Chi-Square Test)</strong></summary>
+
+### Problem  
+Test whether birth weight variance exceeds 0.16 at the 5% level.
+
+### Method  
+Right-tailed chi-square test
+
+### Result  
+- *χ² ≈ 1.18*
+
+### Decision  
+Fail to reject H₀.
+
+### Conclusion  
+Observed variance is much lower than expected.
+
+</details>
+
+---
+
+<details>
+<summary><strong>Question 24 – Coaching Centre Effectiveness (Paired t-test)</strong></summary>
+
+### Problem  
+Test whether coaching significantly improves student scores at the 1% level.
+
+### Method  
+Paired t-test (one-sided)
+
+### Result  
+- Mean improvement ≈ 7.33  
+- *t ≈ 3.87*, p-value < 0.01
+
+### Decision  
+Reject H₀.
+
+### Conclusion  
+Coaching leads to a statistically significant improvement.
+
+</details>
+
+---
+
+## 🛠 Tools Used
+- **R Programming**
+- Base R statistical functions (`t.test`, `pnorm`, `qnorm`, `qchisq`)
+
+---
